@@ -7,18 +7,22 @@ public class Number {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Please enter a comma number: ");
         double number = scanner.nextDouble();
-        if (-(-number) < 1_000_000) {
+        scanner.close();
+        if (number > 0 && number < 1) {
+            System.out.println("Positive small");
+        } else if (number > 0 && number <= 1_000_000) {
             System.out.println("Positive");
-        } else if (-(-number) > 1_000_000) {
+        } else if (number > 1_000_000) {
             System.out.println("Positive large");
-        } else if (-(-number) < 1) {
+        } else if (number < 0 && Math.abs(number) < 1) {
             System.out.println("Negative small");
+        } else if (number < 0 && Math.abs(number) > 1_000_000) {
+            System.out.println("Negative large");
+        } else if (number < 0) {
+            System.out.println("Negative");
         } else {
-            System.out.println("zero");
+            System.out.println("Zero");
         }
     }
 }
 
-//O parere: faptul ca trebuie neaparat sa adaugam "Positive" sau "Negative" creeaza confuzie,
-//deoarece valoarea absoluta va fi intodeauna pozitiva, dar nu stim ce a introdus
-//utilizatorul de la tastatura
