@@ -15,7 +15,7 @@ public class SumOfTwoNumbers {
             System.out.println("The sum: " + (a + b));
             System.out.println("Do you want to repeat the action? Y/N");
             String answer = scanner.next();
-            if ("N".equalsIgnoreCase(answer) || !"Y".equalsIgnoreCase(answer)) {
+            if (!"Y".equalsIgnoreCase(answer)) {
                 run = false;
                 scanner.close();
             }
