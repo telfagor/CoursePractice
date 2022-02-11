@@ -3,6 +3,7 @@ package lesson7.homework;
 import java.util.Scanner;
 
 public class NumberReverse {
+
     public static int reverse(int number) {
         int reverse = 0;
         while (number != 0) {
