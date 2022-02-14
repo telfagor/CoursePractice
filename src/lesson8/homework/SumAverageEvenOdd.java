@@ -48,9 +48,7 @@ public class SumAverageEvenOdd {
     public static int calcMatrixSum (int[][] matrix) {
         int sum = 0;
         for (int[] array : matrix) {
-            for (int elem : array) {
-                sum += elem;
-            }
+            sum += calcVectorSum(array);
         }
         return sum;
     }
@@ -70,11 +68,7 @@ public class SumAverageEvenOdd {
     public static int countMatrixEvenElements(int[][] matrix) {
         int counter = 0;
         for (int[] array : matrix) {
-            for (int elem : array) {
-                if (elem % 2 == 0) {
-                    counter++;
-                }
-            }
+            counter += countVectorEvenElements(array);
         }
         return counter;
     }
@@ -82,11 +76,7 @@ public class SumAverageEvenOdd {
     public static int countMatrixOddElements(int[][] matrix) {
         int counter = 0;
         for (int[] array : matrix) {
-            for (int elem : array) {
-                if (elem % 2 != 0) {
-                    counter++;
-                }
-            }
+            counter += countVectorOddElements(array);
         }
         return counter;
     }
