@@ -45,6 +45,14 @@ public class Employee {
         this.address = address;
     }
 
+    public static void printInfoAboutEmployees(Employee[] employees) {
+        System.out.println("Name \t Year of joining \t Salary \t Address");
+        for (Employee employee : employees) {
+            System.out.printf("%-10s \t %4d \t %14.2f \t %-15s\n", employee.name,
+                    employee.yearOfJoining, employee.salary, employee.address);
+        }
+    }
+
     @Override
     public String toString() {
         return "Employee{"
