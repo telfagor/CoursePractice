@@ -12,4 +12,11 @@ public class Helper {
         }
         return number;
     }
+
+    public static void printVector(int[] array) {
+        for (int elem : array) {
+            System.out.print(elem + " ");
+        }
+        System.out.println();
+    }
 }
