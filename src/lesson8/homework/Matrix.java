@@ -1,5 +1,7 @@
 package lesson8.homework;
 
+import help.Helper;
+
 public class Matrix {
     public static int calcMatrixSum(int[][] matrix) {
         int sum = 0;
@@ -48,18 +50,18 @@ public class Matrix {
     }
 
     public static void printCountMatrixEvenElements(int[][] matrix) {
-        double counter = countMatrixEvenElements(matrix);
+        int counter = countMatrixEvenElements(matrix);
         System.out.println("The number of even elements: " + counter);
     }
 
     public static void printCountMatrixOddElements(int[][] matrix) {
-        double counter = countMatrixOddElements(matrix);
+        int counter = countMatrixOddElements(matrix);
         System.out.println("The number of odd elements: " + counter);
     }
 
     public static void printMatrix(int[][] matrix) {
         for (int[] array : matrix) {
-            Vector.printVector(array);
+            Helper.printVector(array);
         }
     }
 }

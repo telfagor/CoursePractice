@@ -52,11 +52,4 @@ public class Vector {
         int counter = countVectorOddElements(array);
         System.out.println("The number of odd elements: " + counter);
     }
-
-    public static void printVector(int[] array) {
-        for (int elem : array) {
-            System.out.print(elem + " ");
-        }
-        System.out.println();
-    }
 }

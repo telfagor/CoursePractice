@@ -2,6 +2,7 @@ package lesson8.homework;
 
 import static lesson8.homework.Vector.*;
 import static lesson8.homework.Matrix.*;
+import static help.Helper.printVector;
 
 public class Main {
     private static String separator = System.lineSeparator();

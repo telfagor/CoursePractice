@@ -1,10 +1,12 @@
 package lesson8.homework;
 
+import help.Helper;
+
 public class ArrayClone {
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         int[] copyOfArray = createArrayClone(array);
-        showCopyOfArray(copyOfArray);
+        Helper.printVector(copyOfArray);
     }
 
     public static int[] createArrayClone(int[] array) {
@@ -14,11 +16,5 @@ public class ArrayClone {
         }
         //System.arraycopy(array, 0, copyOfArray, 0, array.length);
         return copyOfArray;
-    }
-
-    public static void showCopyOfArray(int[] array) {
-        for (int item : array) {
-            System.out.print(item + " ");
-        }
     }
 }
