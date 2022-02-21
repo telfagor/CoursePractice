@@ -5,11 +5,23 @@ import java.util.Scanner;
 public class Helper {
     public static double validateDoubleInputValue() {
         Scanner scanner = new Scanner(System.in);
-        double number = scanner.nextDouble();
-        while (number <= 0) {
-            System.out.print("Enter a value greater than zero please: ");
-            number = scanner.nextDouble();
+
+        double number = 0.0;
+        while (true) {
+            if (scanner.hasNextDouble()) {
+                number = scanner.nextDouble();
+                if (number > 0) {
+                    break;
+                } else {
+                    System.out.print("Enter a value greater than zero: ");
+                    scanner.nextLine();
+                }
+            } else {
+                System.out.print("Enter a numeric value: ");
+                scanner.nextLine();
+            }
         }
+        //scanner.close();
         return number;
     }
 
