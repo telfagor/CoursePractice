@@ -2,10 +2,7 @@ package lesson5.homework;
 
 import help.Helper;
 
-import java.util.Scanner;
-
 public class Rectangles {
-    private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         System.out.println("You need to enter the width and height for two rectangles");
@@ -18,7 +15,6 @@ public class Rectangles {
         double secondRectangleWidth = Helper.validateDoubleInputValue();
         System.out.print("The height for second rectangle: ");
         double secondRectangleHeight = Helper.validateDoubleInputValue();
-        scanner.close();
         double firstRectangleArea  = calcRectangleArea(firstRectangleWidth, firstRectangleHeight);
         double secondRectangleArea = calcRectangleArea(secondRectangleWidth, secondRectangleHeight);
         identifyTheLargestArea(firstRectangleArea, secondRectangleArea);

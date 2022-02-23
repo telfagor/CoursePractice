@@ -1,6 +1,7 @@
 package lesson7.homework;
 
 import java.util.Scanner;
+import help.Helper;
 
 public class NumberReverse {
 
@@ -17,7 +18,7 @@ public class NumberReverse {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the number please: ");
-        int number = scanner.nextInt();
+        int number = Helper.validateIntInputValue(Integer.MIN_VALUE, Integer.MAX_VALUE);
         scanner.close();
         System.out.println(reverse(number));
     }

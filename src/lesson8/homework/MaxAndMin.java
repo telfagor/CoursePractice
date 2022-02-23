@@ -28,4 +28,19 @@ public class MaxAndMin {
         }
         return max;
     }
+
+    public static void printMin(int[] array) {
+        int min = findMinOfArray(array);
+        System.out.println("Min = " + min);
+    }
+
+    public static void printMax(int[] array) {
+        int max = findMaxOfArray(array);
+        System.out.println("Max = " + max);
+    }
+
+    public static void printMinAndMax(int[] array) {
+        printMin(array);
+        printMax(array);
+    }
 }

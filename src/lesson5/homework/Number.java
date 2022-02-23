@@ -1,12 +1,13 @@
 package lesson5.homework;
 
 import java.util.Scanner;
+import help.Helper;
 
 public class Number {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Please enter a comma number: ");
-        double number = scanner.nextDouble();
+        double number = Helper.validateDoubleInputValue();
         scanner.close();
         if (number > 0 && number < 1) {
             System.out.println("Positive small");

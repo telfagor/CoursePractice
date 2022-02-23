@@ -1,7 +1,5 @@
 package lesson12.homework.garage;
 
-import lesson12.homework.garage.Customer;
-
 public class ParkingGarage {
     private static final double minCost = 2.0;
     private static final double additionalCost = 0.5;
