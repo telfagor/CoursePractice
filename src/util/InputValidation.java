@@ -1,12 +1,11 @@
-package help;
+package util;
 
-import lesson12.homework.garage.Customer;
 import java.util.Scanner;
 
-public class Helper {
-    private static Scanner scanner = new Scanner(System.in);
+public class InputValidation {
+    final Scanner scanner = new Scanner(System.in);
 
-    public static double validateDoubleInputValue() {
+    public double validateDoubleInputValue() {
         double number = 0.0;
         while (true) {
             if (scanner.hasNextDouble()) {
@@ -25,14 +24,7 @@ public class Helper {
         return number;
     }
 
-    public static void printVector(int[] array) {
-        for (int elem : array) {
-            System.out.print(elem + " ");
-        }
-        System.out.println();
-    }
-
-    public static int validateIntInputValue(int min, int max) {
+    public int validateIntInputValue(int min, int max) {
         int number = 0;
         while (true) {
             if (scanner.hasNextInt()) {
@@ -44,14 +36,14 @@ public class Helper {
                     scanner.nextLine();
                 }
             } else {
-                if (scanner.hasNextDouble()) {
-                    System.out.print("Enter an integer: ");
-                } else {
-                    System.out.print("Enter a numeric value: ");
-                }
+                System.out.print("Enter an integer: ");
                 scanner.nextLine();
             }
         }
         return number;
+    }
+
+    public String askString() {
+        return scanner.nextLine();
     }
 }

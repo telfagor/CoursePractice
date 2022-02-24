@@ -1,10 +1,13 @@
 package lesson8.homework;
 
+import util.Helper;
+
 public class MaxAndMin {
     public static void main(String[] args) {
         int[] array = {1,2,3,4,5,6,7,8,9,10};
         int min = findMinOfArray(array);
         int max = findMaxOfArray(array);
+        Helper.printVector(array);
         System.out.println("Min = " + min);
         System.out.println("Max = " + max);
     }

@@ -2,10 +2,10 @@ package lesson8.homework;
 
 import static lesson8.homework.Vector.*;
 import static lesson8.homework.Matrix.*;
-import static help.Helper.printVector;
+import static util.Helper.printVector;
 
 public class Main {
-    private static String separator = System.lineSeparator();
+    private static final String separator = System.lineSeparator();
 
     public static void main(String[] args) {
         int[] vector = {1,2,3,4};

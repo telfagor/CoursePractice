@@ -1,6 +1,6 @@
 package lesson8.homework;
 
-import help.Helper;
+import util.Helper;
 
 public class ArrayClone {
     public static void main(String[] args) {

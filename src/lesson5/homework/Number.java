@@ -1,14 +1,12 @@
 package lesson5.homework;
 
-import java.util.Scanner;
-import help.Helper;
+import util.*;
 
 public class Number {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Please enter a comma number: ");
-        double number = Helper.validateDoubleInputValue();
-        scanner.close();
+        ConsoleInput input = new ConsoleInput();
+        double number = input.askDouble("Please enter a comma number: ");
+        input.close();
         if (number > 0 && number < 1) {
             System.out.println("Positive small");
         } else if (number > 0 && number <= 1_000_000) {

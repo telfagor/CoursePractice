@@ -1,20 +1,18 @@
 package lesson5.homework;
 
-import help.Helper;
+import util.*;
 
 public class Rectangles {
 
     public static void main(String[] args) {
+        ConsoleInput input = new ConsoleInput();
         System.out.println("You need to enter the width and height for two rectangles");
         System.out.println("Values must be greater than zero");
-        System.out.print("The width for first rectangle: ");
-        double firstRectangleWidth = Helper.validateDoubleInputValue();
-        System.out.print("The height for first rectangle: ");
-        double firstRectangleHeight = Helper.validateDoubleInputValue();
-        System.out.print("The width for second rectangle: ");
-        double secondRectangleWidth = Helper.validateDoubleInputValue();
-        System.out.print("The height for second rectangle: ");
-        double secondRectangleHeight = Helper.validateDoubleInputValue();
+        double firstRectangleWidth = input.askDouble("The width for first rectangle: ");
+        double firstRectangleHeight = input.askDouble("The height for first rectangle: ");
+        double secondRectangleWidth = input.askDouble("The width for second rectangle: ");
+        double secondRectangleHeight = input.askDouble("The height for second rectangle: ");
+        input.close();
         double firstRectangleArea  = calcRectangleArea(firstRectangleWidth, firstRectangleHeight);
         double secondRectangleArea = calcRectangleArea(secondRectangleWidth, secondRectangleHeight);
         identifyTheLargestArea(firstRectangleArea, secondRectangleArea);

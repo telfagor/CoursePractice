@@ -1,6 +1,6 @@
 package lesson8.homework;
 
-import help.Helper;
+import util.Helper;
 
 public class Matrix {
     public static int calcMatrixSum(int[][] matrix) {

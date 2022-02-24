@@ -1,12 +1,12 @@
 package lesson5.homework;
 
-import java.util.Scanner;
+import util.*;
 
 public class CheckNumber {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int number = scanner.nextInt();
-        scanner.close();
+        ConsoleInput input = new ConsoleInput();
+        int number = input.askInt("Enter an integer: ", Integer.MIN_VALUE, Integer.MAX_VALUE);
+        input.close();
         System.out.println(number % 2 == 0 ? "even" : "odd");
     }
 }
