@@ -21,7 +21,7 @@ public class Main {
                 try {
                     option = Integer.parseInt(reader.readLine());
                     break;
-                } catch (IOException e) {
+                } catch (NumberFormatException e) {
                     System.out.print("Enter an integer: ");
                 }
             } while (true);
@@ -39,12 +39,12 @@ public class Main {
                     Circle cs = new Circle(3.2);
                     Cube cb = new Cube(6.7);
                     Sphere sp = new Sphere(35.5);
-                    System.out.println(sq.getArea());
-                    System.out.println(cs.getArea());
-                    System.out.println(cb.getArea());
-                    System.out.println(cb.getVolume());
-                    System.out.println(sp.getArea());
-                    System.out.println(sp.getVolume());
+                    System.out.println("The area of the square: " + sq.getArea());
+                    System.out.println("The area of the circle: " + cs.getArea());
+                    System.out.println("The area of the cube: " + cb.getArea());
+                    System.out.println("The volume of the cube: " + cb.getVolume());
+                    System.out.println("The area of the sphere: " + sp.getArea());
+                    System.out.println("The area of the sphere: " + sp.getVolume());
                 }
                 case 3 -> {
                     reader.close(); //cere prelucrare
