@@ -16,7 +16,7 @@ public class NumberReverse {
 
     public static void main(String[] args) {
         ConsoleInput input = new ConsoleInput();
-        int number = input.askInt("Enter the number please: ", Integer.MIN_VALUE, Integer.MAX_VALUE);
+        int number = input.askInt("Enter the number please: ");
         input.close();
         System.out.println(reverse(number));
     }

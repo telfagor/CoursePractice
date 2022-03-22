@@ -10,14 +10,30 @@ public class ConsoleInput implements Input {
     }
 
     @Override
-    public int askInt(String message, int min, int max) {
+    public int askInt(String message, int min, int max, String value) {
         System.out.print(message);
-        return input.validateIntInputValue(min, max);
+        return input.validateIntInputValue(min, max, value);
+    }
+
+    @Override
+    public int askInt(String message) {
+        System.out.print(message);
+        return input.validateIntInputValue();
     }
 
     @Override
     public String askString(String message) {
-        System.out.println(message);
+        System.out.print(message);
+        return input.askString();
+    }
+
+    @Override
+    public String askStringNext() {
+        return input.askStringNext();
+    }
+
+    @Override
+    public String askString() {
         return input.askString();
     }
 

@@ -2,6 +2,12 @@ package lesson5.homework;
 
 import util.*;
 
+/** Write a Java program that reads a floating-point number. If the
+* number is zero it prints "zero", otherwise, print "positive" or "negative". Add
+* "small" if the absolute value of the number is less than 1, or "large" if it
+* exceeds 1,000,000.
+ */
+
 public class Number {
     public static void main(String[] args) {
         ConsoleInput input = new ConsoleInput();

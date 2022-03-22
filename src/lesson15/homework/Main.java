@@ -49,7 +49,7 @@ public class Main {
                     }
                 }
                 case 2 -> {
-                    Date date = new Date(1, 3, 2000);
+                    Date date = new Date(31, 6, 2000);
                     date.setDay(4);
                     date.setMonth(5);
                     date.displayDate();

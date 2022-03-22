@@ -1,9 +1,16 @@
 package util;
 
 public interface Input {
-    public double askDouble(String message);
+     double askDouble(String message);
 
-    public int askInt(String message, int min, int max);
+     int askInt(String message, int min, int max, String value);
 
-    public String askString(String message);
+     int askInt(String message);
+
+     String askString(String message);
+
+     String askString();
+
+     String askStringNext();
+
 }

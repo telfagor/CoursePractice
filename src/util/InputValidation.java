@@ -6,7 +6,7 @@ public class InputValidation {
     final Scanner scanner = new Scanner(System.in);
 
     public double validateDoubleInputValue() {
-        double number = 0.0;
+        double number;
         while (true) {
             if (scanner.hasNextDouble()) {
                 number = scanner.nextDouble();
@@ -14,36 +14,61 @@ public class InputValidation {
                     break;
                 } else {
                     System.out.print("Enter a value greater than zero: ");
-                    scanner.nextLine();
                 }
             } else {
                 System.out.print("Enter a numeric value: ");
-                scanner.nextLine();
             }
+            scanner.nextLine();
         }
+        scanner.nextLine();
         return number;
     }
 
-    public int validateIntInputValue(int min, int max) {
-        int number = 0;
+    public int validateIntInputValue(int min, int max, String value) {
+        int number;
         while (true) {
             if (scanner.hasNextInt()) {
                 number = scanner.nextInt();
                 if (number >= min && number <= max) {
                     break;
                 } else {
-                    System.out.print("Enter a value from " + min + "to " + max);
-                    scanner.nextLine();
+                    System.out.println("Enter a value from " + min + " to " + max);
+                    System.out.print("Enter the " + value + ": ");
                 }
             } else {
                 System.out.print("Enter an integer: ");
-                scanner.nextLine();
             }
+            scanner.nextLine();
         }
+        scanner.nextLine();
+        return number;
+    }
+
+    public int validateIntInputValue() {
+        int number;
+        while (true) {
+            if (scanner.hasNextInt()) {
+                number = scanner.nextInt();
+                if (number > 0) {
+                    break;
+                }
+                else {
+                    System.out.print("Enter a value greater than zero: ");
+                }
+            } else {
+                System.out.print("Enter an integer: ");
+            }
+            scanner.nextLine();
+        }
+        scanner.nextLine();
         return number;
     }
 
     public String askString() {
         return scanner.nextLine();
+    }
+
+    public String askStringNext() {
+        return scanner.next();
     }
 }

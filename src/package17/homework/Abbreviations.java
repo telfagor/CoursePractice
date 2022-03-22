@@ -1,25 +1,27 @@
 package package17.homework;
 
-import java.util.ArrayList;
+import java.util.StringTokenizer;
 
 public class Abbreviations {
 
-    public static ArrayList<String> getSubstrings(String name) {
-        String[] array = name.split(" ");
-        ArrayList<String> list = new ArrayList<>();
-        for (String s : array) {
-            if (!s.isEmpty()) {
-                list.add(s);
-            }
+    public static String[] getTokens(String name) {
+        StringTokenizer tokenizer = new StringTokenizer(name);
+        String[] tokens = new String[tokenizer.countTokens()];
+
+        int index = 0;
+        while(tokenizer.hasMoreTokens()) {
+            tokens[index++] = tokenizer.nextToken();
         }
-        return list;
+        return tokens;
     }
 
-    public static void printAbbreviations(ArrayList<String> list) {
-        for (int i = 0; i < list.size() - 1; i++) {
-            char firstLetter = list.get(i).charAt(0);
+    public static void printAbbreviations(String[] abbr) {
+        for (int i = 0; i < abbr.length - 1; i++) {
+            char firstLetter = Character.toUpperCase(abbr[i].charAt(0));
             System.out.print(firstLetter + ".");
         }
-        System.out.println(list.get(list.size() - 1));
+        String lastWord = abbr[abbr.length - 1];
+        char firstLetterOfLastWord = Character.toUpperCase(lastWord.charAt(0));
+        System.out.println(firstLetterOfLastWord + lastWord.substring(1));
     }
 }

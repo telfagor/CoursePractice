@@ -1,6 +1,6 @@
 package lesson12.homework.garage;
 
-public class ParkingGarage {
+public final class ParkingGarage {
     private static final double minCost = 2.0;
     private static final double additionalCost = 0.5;
     private static final double maxCost = 10;

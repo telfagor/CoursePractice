@@ -27,8 +27,8 @@ public class Main {
                 }
                 case 2 -> {
                     String name = input.askString("Enter your full name: ");
-                    ArrayList<String> abbr = Abbreviations.getSubstrings(name);
-                    Abbreviations.printAbbreviations(abbr);
+                    String[] tokens = Abbreviations.getTokens(name);
+                    Abbreviations.printAbbreviations(tokens);
                 }
                 case 3 -> {
                     String str = input.askString("Enter a string: ");
@@ -38,13 +38,17 @@ public class Main {
                 }
                 case 4 -> {
                     String str = input.askString("Enter a string: ");
-                    int count = NumberOfWords.countWords2(str);
+                    int count = NumberOfWords.getNumberOfWords(str);
                     System.out.println("The number of words: " + count);
                 }
-                case 5  -> isExit = false;
+                case 5  -> {
+                    input.close();
+                    isExit = false;
+                    System.out.println("Have a nice day!");
+                }
                 default -> System.out.println("This option does not exist");
             }
         } while (isExit);
-        input.close();
+
     }
 }

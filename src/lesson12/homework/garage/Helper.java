@@ -6,7 +6,7 @@ public class Helper {
      static void getAction(Customer client) {
          Input input = new ConsoleInput();
         System.out.println("Welcome to our cheap garage park!");
-        int hours = input.askInt("How many hours do you want to park: ", 1, 24);
+        int hours = input.askInt("How many hours do you want to park: ", 1, 24, "hours");
         client.setParkedHours(hours);
         client.calculateCharges();
         System.out.println("Customer fee: " + client.getClientCharge() + "$");
