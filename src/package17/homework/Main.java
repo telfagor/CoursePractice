@@ -1,7 +1,7 @@
 package package17.homework;
 
 import util.ConsoleInput;
-import java.util.ArrayList;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,7 +16,8 @@ public class Main {
             System.out.println("2. Second task");
             System.out.println("3. Third task");
             System.out.println("4. Fourth task");
-            System.out.println("5. Exit");
+            System.out.println("5. Fifth task");
+            System.out.println("6. Exit");
             option = input.askInt("Select the option: ");
             switch (option) {
                 case 1 -> {
@@ -42,6 +43,11 @@ public class Main {
                     System.out.println("The number of words: " + count);
                 }
                 case 5  -> {
+                    String str = input.askString("Enter a string: ");
+                    Map<Character, Integer> map = NumberOfEachLetter.getNumberOfEachLetter(str);
+                    System.out.println(map);
+                }
+                case 6 -> {
                     input.close();
                     isExit = false;
                     System.out.println("Have a nice day!");
